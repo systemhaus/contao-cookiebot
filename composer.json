@@ -1,18 +1,18 @@
 {
-    "name": "contao/skeleton-bundle",
+    "name": "contao/contao-cookiebot-bundle",
     "type": "contao-bundle",
-    "description": "Skeleton for custom Contao 4 bundles",
+    "description": "Bundle for inserting cookiebot in contao",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
-            "name": "Leo Feyer",
-            "homepage": "https://github.com/leofeyer"
+            "name": "ETES GmbH",
+            "homepage": "https://github.com/systemhaus/"
         }
     ],
     "require": {
         "php": "^5.6 || ^7.0",
-        "contao/core-bundle": "4.4.*",
-        "symfony/framework-bundle": "^3.3"
+        "contao/core-bundle": "~4.4",
+        "symfony/framework-bundle": ">=3.3"
     },
     "conflict": {
         "contao/core": "*",
@@ -28,20 +28,19 @@
         "symfony/phpunit-bridge": "^3.2"
     },
     "extra": {
-        "contao-manager-plugin": "Contao\\SkeletonBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Contao\\CookiebotBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Contao\\SkeletonBundle\\": "src/"
-        }
+            "Contao\\CookiebotBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/classes"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Contao\\SkeletonBundle\\Tests\\": "tests/"
+            "Contao\\CookiebotBundle\\Tests\\": "tests/"
         }
-    },
-    "support": {
-        "issues": "https://github.com/contao/skeleton-bundle/issues",
-        "source": "https://github.com/contao/skeleton-bundle"
     }
 }
