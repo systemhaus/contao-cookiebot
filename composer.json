@@ -35,7 +35,8 @@
             "Contao\\CookiebotBundle\\": "src/"
         },
         "classmap": [
-            "src/Resources/contao/classes"
+            "src/Resources/contao/classes",
+	    "src/Resources/contao/modules"
         ]
     },
     "autoload-dev": {
