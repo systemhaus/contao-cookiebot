@@ -13,5 +13,5 @@ $GLOBALS['TL_DCA']['tl_settings']['palettes']['default'] = str_replace (
 */ 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['cookiebotApiNumber'] = array (
 	'inputType'		=> 'text',
-	'eval'			=> array('nospace'=>true, 'decodeEntities'=>true, 'tl_class'=>'w50', 'rgxp'=>'alnum')
+	'eval'			=> array('nospace'=>true, 'decodeEntities'=>true, 'tl_class'=>'w50', 'rgxp'=>'validateCookiebotApi')
 );

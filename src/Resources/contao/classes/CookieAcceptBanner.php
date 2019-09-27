@@ -1,6 +1,6 @@
 <?php
 
-namespace Contao;
+namespace systemhaus;
 
 /*
 /Klasse zum Editieren des Beginns der Head-Sektion von fe_page
