@@ -1,5 +1,5 @@
 {
-    "name": "contao/contao-cookiebot-bundle",
+    "name": "systemhaus/contao-cookiebot-bundle",
     "type": "contao-bundle",
     "description": "Bundle for inserting cookiebot in contao",
     "license": "LGPL-3.0-or-later",
@@ -28,11 +28,11 @@
         "symfony/phpunit-bridge": "^3.2"
     },
     "extra": {
-        "contao-manager-plugin": "Contao\\CookiebotBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "systemhaus\\CookiebotBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Contao\\CookiebotBundle\\": "src/"
+            "systemhaus\\CookiebotBundle\\": "src/"
         },
         "classmap": [
             "src/Resources/contao/classes",
@@ -41,7 +41,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Contao\\CookiebotBundle\\Tests\\": "tests/"
+            "systemhaus\\CookiebotBundle\\Tests\\": "tests/"
         }
     }
 }

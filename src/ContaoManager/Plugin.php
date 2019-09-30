@@ -8,9 +8,9 @@
  * @license LGPL-3.0-or-later
  */
 
-namespace Contao\CookiebotBundle\ContaoManager;
+namespace systemhaus\CookiebotBundle\ContaoManager;
 
-use Contao\CookiebotBundle\ContaoCookiebotBundle;
+use systemhaus\CookiebotBundle\ContaoCookiebotBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
