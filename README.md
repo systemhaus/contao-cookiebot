@@ -1,48 +1,32 @@
-# Contao 4 skeleton bundle
+# Contao Cookiebot Extension
 
-Contao is an Open Source PHP Content Management System for people who want a
-professional website that is easy to maintain. Visit the [project website][1]
-for more information.
-
-You can use the skeleton bundle as basis for your own Contao bundle.
+This extension is used to implement cookiebot in a website
 
 ## Install
 
-Download the skeleton bundle:
+This extension can be installed using composer
 
 ```bash
-wget https://github.com/contao/skeleton-bundle/archive/master.zip
-unzip master.zip
-mv skeleton-bundle-master [package name]
-cd [package name]
+composer require systemhaus/contao-cookiebot-bundle
 ```
 
-## Customize
+## Configuring ContaoCookiebotBundle
 
-First adjust the following files:
+This extension provides a field in the contao settings and a frontend modules.
+Enter your Cookiebot API number in the field to make the number available to the extension.
+The script is now automatically added to the head-section of your website. Cookies are blocked and the banner is shown.
 
- * `.php_cs.php`
- * `composer.json`
- * `phpunit.xml.dist`
- * `README.md`
+To add the cookie declaration add the frontend-modul at any position in your website's body. The module grabs the API number automatically.
 
-Then rename the following files and/or the references to `SkeletonBundle` in
-the following files:
+To change your cookiebot settings go to your settings on the cookiebot website - this options are not provided by the extension
 
- * `src/ContaoManager/Plugin.php`
- * `src/DependencyInjection/ContaoSkeletonExtension.php`
- * `src/ContaoSkeletonBundle.php`
- * `tests/ContaoSkeletonBundleTest.php`
-
-Finally add your custom classes and resources.
-
-## Release
-
-Run the PHP-CS-Fixer and the unit test before you release your bundle:
-
+## Troubleshooting
+If your API number is not accepted  try removing the following lines from contao-cookiebot-bundle/src/Resources/contao/classes/Validation.php
+This Class checks if the cookiebot API is valid.
 ```bash
-vendor/bin/php-cs-fixer fix -v
-vendor/bin/phpunit
+if(!preg_match('/^[0-9]{8}([\-][0-9]{4}){3}[\-][0-9]{12}$/', $varValue)) {
+                                $objWidget->addError('The entered number is not a valid Cookiebot-Api.');
+                        }
 ```
 
-[1]: https://contao.org
+Authored by: [ETES GmbH](https://github.com/systemhaus/)
