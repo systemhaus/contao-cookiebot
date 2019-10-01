@@ -2,9 +2,9 @@
 
 namespace systemhaus;
 
-/*
-/Klasse zum Editieren des Beginns der Head-Sektion von fe_page
-*/
+/**
+ *Klasse zum Editieren des Beginns der Head-Sektion von fe_page
+ */
 class CookieAcceptBanner {
 	public function blockAllCookies($strBuffer, $strTemplate) {
 		\Controller::loadDataContainer('TL_CONFIG');

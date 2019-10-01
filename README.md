@@ -7,12 +7,12 @@ This extension is used to implement cookiebot in a website
 This extension can be installed using composer
 
 ```bash
-composer require systemhaus/contao-cookiebot-bundle
+composer require systemhaus/contao-cookiebot-bundle/
 ```
 
 ## Configuring ContaoCookiebotBundle
 
-This extension provides a field in the contao settings and a frontend modules.
+This extension provides a field in the contao settings and a frontend module.
 Enter your Cookiebot API number in the field to make the number available to the extension.
 The script is now automatically added to the head-section of your website. Cookies are blocked and the banner is shown.
 
