@@ -14,14 +14,14 @@
   ],
   "require": {
     "php": "^7.0",
-    "contao/core-bundle": "~4.4",
-    "symfony/framework-bundle": ">=3.3"
+    "contao/core-bundle": "~4.4"
   },
   "conflict": {
     "contao/core": "*",
     "contao/manager-plugin": "<2.0 || >=3.0"
   },
   "require-dev": {
+    "contao/manager-plugin": "^2.0",
     "jakub-onderka/php-parallel-lint": "^1.0",
     "jakub-onderka/php-var-dump-check": "^0.3.0",
     "phpunit/phpcov": "^5.0",
