@@ -1,10 +1,13 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  *add translation for field 'cookiebotApiNumber'
  */
 $GLOBALS['TL_LANG']['tl_settings']['cookiebotApiNumber'] = array (
-	'API number',
-	'Please enter API number here.'
+    'API number',
+    'Please enter API number here.'
 );
 /**
  *add translation for field 'cookiebot_legend'

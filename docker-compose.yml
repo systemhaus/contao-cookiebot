@@ -1,0 +1,8 @@
+version: '3.2'
+
+services:
+    test:
+        image: systemhaus/php:7.2
+        working_dir: /var/www/html/
+        volumes:
+            - .:/var/www/html

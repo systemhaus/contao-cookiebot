@@ -1,0 +1,39 @@
+# GitLab CI initialization
+
+image: systemhaus/php:7.2
+
+stages:
+    - prepare
+    - test
+
+install_dev:
+    stage: prepare
+    script:
+        - php /usr/bin/composer install --dev --no-progress --no-suggest -n
+        - php /usr/bin/composer dump-autoload --optimize
+    artifacts:
+        when: always
+        paths:
+            - vendor/
+            - c3.php
+        expire_in: 60 mins
+    cache:
+        key: "$CI_COMMIT_REF_SLUG"
+        paths:
+            - vendor/
+            - c3.php
+
+vardump:
+    stage: test
+    script:
+        - /usr/bin/composer run-script vardump
+
+lint:
+    stage: test
+    script:
+        - /usr/bin/composer run-script lint
+
+syntax:
+    stage: test
+    script:
+        - /usr/bin/composer run-script check-style

@@ -1,47 +1,54 @@
 {
-    "name": "systemhaus/contao-cookiebot-bundle",
-    "type": "contao-bundle",
-    "description": "Bundle for inserting cookiebot in contao",
-    "license": "LGPL-3.0-or-later",
-    "authors": [
-        {
-            "name": "ETES GmbH",
-            "homepage": "https://github.com/systemhaus/"
-        }
-    ],
-    "require": {
-        "php": "^5.6 || ^7.0",
-        "contao/core-bundle": "~4.4",
-        "symfony/framework-bundle": ">=3.3"
-    },
-    "conflict": {
-        "contao/core": "*",
-        "contao/manager-plugin": "<2.0 || >=3.0"
-    },
-    "require-dev": {
-        "contao/manager-plugin": "^2.0",
-        "doctrine/doctrine-cache-bundle": "^1.3",
-        "friendsofphp/php-cs-fixer": "^2.12",
-        "php-http/guzzle6-adapter": "^1.1",
-        "php-http/message-factory": "^1.0.2",
-        "phpunit/phpunit": "^5.7.26",
-        "symfony/phpunit-bridge": "^3.2"
-    },
-    "extra": {
-        "contao-manager-plugin": "systemhaus\\CookiebotBundle\\ContaoManager\\Plugin"
-    },
-    "autoload": {
-        "psr-4": {
-            "systemhaus\\CookiebotBundle\\": "src/"
-        },
-        "classmap": [
-            "src/Resources/contao/classes",
-	    "src/Resources/contao/modules"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "systemhaus\\CookiebotBundle\\Tests\\": "tests/"
-        }
+  "name": "systemhaus/contao-cookiebot",
+  "type": "contao-bundle",
+  "description": "Bundle for inserting Cookiebot JS in Contao frontend pages",
+  "homepage": "https://github.com/systemhaus/contao-cookiebot",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Julien Steininger",
+      "email": "julien.steininger@etes.de",
+      "homepage": "https://www.etes.de/",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": "^7.0",
+    "contao/core-bundle": "~4.4",
+    "symfony/framework-bundle": ">=3.3"
+  },
+  "conflict": {
+    "contao/core": "*",
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "require-dev": {
+    "jakub-onderka/php-parallel-lint": "^1.0",
+    "jakub-onderka/php-var-dump-check": "^0.3.0",
+    "phpunit/phpcov": "^5.0",
+    "slevomat/coding-standard": "~4.0",
+    "squizlabs/php_codesniffer": "^3.2"
+  },
+  "extra": {
+    "contao-manager-plugin": "systemhaus\\CookiebotBundle\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "systemhaus\\CookiebotBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/classes",
+      "src/Resources/contao/modules"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "systemhaus\\CookiebotBundle\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "check-style": "phpcs -pn --standard=tests/ruleset.xml src",
+    "fix-style": "phpcbf -p --standard=tests/ruleset.xml src",
+    "vardump": "var-dump-check --zend src",
+    "lint": "parallel-lint src/"
+  }
 }

@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 /**
  *Hook registrieren zum Editieren der Head-Sektion
  */
@@ -11,4 +14,3 @@ $GLOBALS['TL_HOOKS']['addCustomRegexp']['validateCookiebotApi'] = array('systemh
  *Frontendmodul für Cookieerklärung
  */
 $GLOBALS['FE_MOD']['cookiebotBundle']['cookieDeclaration'] = 'systemhaus\\CookieDeclaration';
-

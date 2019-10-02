@@ -1,6 +1,17 @@
-# Composer
-/composer.lock
-/vendor/
+# OS stuff
+.DS_Store
+Thumbs.db
 
-# PhpUnit
-/phpunit.xml
+# Composer
+composer.lock
+vendor/
+
+# IDE
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+
+# Tests
+c3.php

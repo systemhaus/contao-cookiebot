@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of [systemhaus/contao-cookiebot-bundle].
  *
@@ -8,13 +10,13 @@
  * @license LGPL-3.0-or-later
  */
 
-namespace systemhaus\CookiebotBundle\ContaoManager;
+namespace Systemhaus\Cookiebot\ContaoManager;
 
-use systemhaus\CookiebotBundle\ContaoCookiebotBundle;
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use systemhaus\CookiebotBundle\ContaoCookiebotBundle;
 
 class Plugin implements BundlePluginInterface
 {

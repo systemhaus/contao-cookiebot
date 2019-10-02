@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of [systemhaus/contao-cookiebot-bundle].
  *
@@ -8,7 +10,7 @@
  * @license LGPL-3.0-or-later
  */
 
-namespace systemhaus\CookiebotBundle\DependencyInjection;
+namespace Systemhaus\Cookiebot\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
