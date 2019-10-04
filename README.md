@@ -11,7 +11,7 @@ available, but terms can change any time. ETES is not responsible for the
 Cookiebot service, but only offers this extension as a contribution to the
 community.
 
-## Prequisites
+## Prerequisites
 
 For using Cookiebot in any website, an API key is required. You can register
 yourself [directly with Cookiebot](https://manage.cookiebot.com/de/signup) or
