@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace systemhaus;
+namespace Systemhaus\Cookiebot;
 
 /**
  *Klasse zur Überprüfung

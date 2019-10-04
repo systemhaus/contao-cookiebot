@@ -16,7 +16,7 @@ use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use systemhaus\CookiebotBundle\ContaoCookiebotBundle;
+use Systemhaus\Cookiebot\ContaoCookiebotBundle;
 
 class Plugin implements BundlePluginInterface
 {
