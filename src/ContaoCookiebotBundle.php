@@ -1,14 +1,13 @@
 <?php
 
-declare(strict_types=1);
-
-/*
- * This file is part of [systemhaus/contao-cookiebot-bundle].
+/**
+ * Contao Cookiebot extension
  *
- * (c) John Doe
- *
- * @license LGPL-3.0-or-later
+ * @copyright 2019 ETES GmbH
+ * @license LGPLv3
  */
+
+declare(strict_types=1);
 
 namespace Systemhaus\Cookiebot;
 
