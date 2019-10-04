@@ -9,8 +9,8 @@ stages:
 install_dev:
     stage: prepare
     script:
-        - php /usr/bin/composer install --dev --no-progress --no-suggest -n
-        - php /usr/bin/composer dump-autoload --optimize
+        - php -d memory_limit=-1 /usr/bin/composer install --dev --no-progress --no-suggest -n
+        - php -d memory_limit=-1 /usr/bin/composer dump-autoload --optimize
     artifacts:
         when: always
         paths:

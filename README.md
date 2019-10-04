@@ -1,32 +1,73 @@
-# Contao Cookiebot Extension
+# Contao Cookiebot
 
-This extension is used to implement cookiebot in a website
+This extension for the open source CMS Contao integrates the GDPR compliant
+cookie consent functionality of [Cookiebot](https://www.cookiebot.com/en/)
+into the website frontend.
 
-## Install
+![Screenshot of Cookiebot in action](help/cookiebot-screenshot.png?raw=true "An example for the Cookiebot disclaimer bar in a website")
 
-This extension can be installed using composer
+**Caution:** Cookiebot is a paid solution. A free plan for small websites is
+available, but terms can change any time. ETES is not responsible for the
+Cookiebot service, but only offers this extension as a contribution to the
+community.
+
+## Prequisites
+
+For using Cookiebot in any website, an API key is required. You can register
+yourself [directly with Cookiebot](https://manage.cookiebot.com/de/signup) or
+choose a [reseller](https://www.cookiebot.com/en/resellers/).  
+**Special:** ETES will give 10€ to the [Contao Association](https://association.contao.org/)
+for every user buying the Cookiebot subscription via us. [More info](https://www.etes.de/cookiebot).
+
+## Installation
+
+This extension can be installed using the Contao Manager or composer. Simply
+search for "Cookiebot" or use the command line
 
 ```bash
-composer require systemhaus/contao-cookiebot-bundle/
+composer require systemhaus/contao-cookiebot
 ```
 
-## Configuring ContaoCookiebotBundle
+As the extension includes new database fields, you need to update the database
+via the Contao install tool afterwards.
 
-This extension provides a field in the contao settings and a frontend module.
-Enter your Cookiebot API number in the field to make the number available to the extension.
-The script is now automatically added to the head-section of your website. Cookies are blocked and the banner is shown.
+## How it works
 
-To add the cookie declaration add the frontend-modul at any position in your website's body. The module grabs the API number automatically.
+The extension loads the Cookiebot JS first place in your website's source code.
+This scripts prevents the browser from setting any cookies before user consent
+has been granted. By doing this, it complies with EU legislation (GDPR) and
+court rulings in the matter of cookies.
 
-To change your cookiebot settings go to your settings on the cookiebot website - this options are not provided by the extension
+Secondly, a bar like the one in the screenshot on top is displayed across the
+content of the website. Colours and texts of this bar can be customized online.
 
-## Troubleshooting
-If your API number is not accepted  try removing the following lines from contao-cookiebot-bundle/src/Resources/contao/classes/Validation.php
-This Class checks if the cookiebot API is valid.
-```bash
-if(!preg_match('/^[0-9]{8}([\-][0-9]{4}){3}[\-][0-9]{12}$/', $varValue)) {
-                                $objWidget->addError('The entered number is not a valid Cookiebot-Api.');
-                        }
-```
+The bar contains an interactive choice dialogue for different kinds of cookies
+used on your website. Cookiebot automatically detects all kinds of cookies and
+classifies them. For each cookie, the user can view a description.
 
-Authored by: [ETES GmbH](https://github.com/systemhaus/)
+After the user has made his choice, the script allows or blocks the cookies
+accordingly, the bar disappears.
+
+For later changes to the user's choice, a similar form should be included in
+privacy page of your website. The extension provides a frontend module for this
+purpose which can be used in any article.
+
+## Configuring the extension
+
+For each of your websites (root pages in the page structure) you can enable
+or disable Cookiebot separately. Cookiebot requires an API key to function.
+You can enter this key in the page settings.
+
+If the key is valid, the Cookiebot bar is automatically shown in the frontend.
+Errors with your key would show up in the Javascript console of your browser. 
+
+If your website contains a legal or privacy page, you can include the Cookiebot
+frontend module there. Simply create a new frontend module and insert it into
+the article of your choice. The frontend module should only be included in a
+page layout if you know what you're doing!
+
+## Support
+
+Authored by: [ETES GmbH](https://github.com/systemhaus/)  
+More information on [our website](https://www.etes.de/cookiebot).  
+For bugs, please create an [issue in the tracker](https://github.com/systemhaus/contao-cookiebot/issues).
