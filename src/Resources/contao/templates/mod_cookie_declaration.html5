@@ -1,8 +1,8 @@
-<?php
-/**
- *Template für Cookie-Erklärung
- */
-\Controller::loadDataContainer('TL_CONFIG');
-?>
-<script id="CookieDeclaration" src="https://consent.cookiebot.com/<?php echo($GLOBALS['TL_CONFIG']['cookiebotApiNumber'])?>/cd.js" type="text/javascript" async></script>
 
+<?php if ($this->active): ?>
+<!-- indexer::stop -->
+<div class="mod_cookiebot block">
+<script id="CookieDeclaration" src="https://consent.cookiebot.com/<?=$this->api_key?>/cd.js" type="text/javascript" async></script>
+</div>
+<!-- indexer::continue -->
+<?php endif; ?>

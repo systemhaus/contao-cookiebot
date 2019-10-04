@@ -1,24 +1,38 @@
 <?php
 
+/**
+ * Contao Cookiebot extension
+ *
+ * @copyright 2019 ETES GmbH
+ * @license LGPLv3
+ */
+
 declare(strict_types=1);
 
 namespace Systemhaus\Cookiebot;
 
-use Controller;
+use PageModel;
 
 /**
- *Klasse zum Editieren des Beginns der Head-Sektion von fe_page
+ * Insert the Cookiebot JS first place in the page <head>
  */
 class CookieAcceptBanner
 {
-    public function blockAllCookies($strBuffer, $strTemplate)
+    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript". data-blockingmode="auto"></script>';
+
+    public function insertJavascriptIntoFullPage($strBuffer, $strTemplate)
     {
-        Controller::loadDataContainer('TL_CONFIG');
-        $returnBuffer = str_replace(
-            "<head>",
-            '<head><script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="' . $GLOBALS['TL_CONFIG']['cookiebotApiNumber'] . '" type="text/javascript". data-blockingmode="auto"></script>',
-            "$strBuffer"
-        );
-        return $returnBuffer;
+        global $objPage;
+        if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null && $objRootPage->cookiebot_active) {
+            $api_key = $objRootPage->cookiebot_api_key;
+            $html = sprintf(self::JS_STRING, $api_key);
+            $strBuffer = str_replace(
+                '<head>',
+                "<head>\n$html",
+                $strBuffer
+            );
+        }
+
+        return $strBuffer;
     }
 }
