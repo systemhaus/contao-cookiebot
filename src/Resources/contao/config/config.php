@@ -17,4 +17,4 @@ $GLOBALS['TL_HOOKS']['modifyFrontendPage'][] = array('Systemhaus\\Cookiebot\\Coo
 /**
  * Register a new frontend module for showing the details about cookies in a privacy page
  */
-$GLOBALS['FE_MOD']['cookiebotBundle']['cookieDeclaration'] = 'Systemhaus\\Cookiebot\\CookieDeclaration';
+$GLOBALS['FE_MOD']['miscellaneous']['cookieDeclaration'] = 'Systemhaus\\Cookiebot\\CookieDeclaration';

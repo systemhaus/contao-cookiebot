@@ -20,6 +20,7 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key';
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_active'],
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => array('submitOnChange' => true),
@@ -27,6 +28,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
 );
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_api_key'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_api_key'],
     'exclude' => true,
     'search' => true,
     'inputType' => 'text',
