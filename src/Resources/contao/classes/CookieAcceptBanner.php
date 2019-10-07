@@ -25,14 +25,15 @@ class CookieAcceptBanner
         global $objPage;
         if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null && $objRootPage->cookiebot_active) {
             $api_key = $objRootPage->cookiebot_api_key;
-            $html = sprintf(self::JS_STRING, $api_key);
-            $strBuffer = str_replace(
-                '<head>',
-                "<head>\n$html",
-                $strBuffer
-            );
+            if ($api_key !== null) {
+                $html = sprintf(self::JS_STRING, $api_key);
+                $strBuffer = str_replace(
+                    '<head>',
+                    "<head>\n$html",
+                    $strBuffer
+                );
+            }
         }
-
         return $strBuffer;
     }
 }
