@@ -33,5 +33,5 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_api_key'] = array(
     'search' => true,
     'inputType' => 'text',
     'eval' => array('decodeEntities' => true, 'tl_class' => 'w50'),
-    'sql' => "text NOT NULL default ''"
+    'sql' => "text default ''"
 );
