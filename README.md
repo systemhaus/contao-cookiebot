@@ -16,8 +16,9 @@ community.
 For using Cookiebot in any website, an API key is required. You can register
 yourself [directly with Cookiebot](https://manage.cookiebot.com/de/signup) or
 choose a [reseller](https://www.cookiebot.com/en/resellers/).  
-**Special:** ETES will give 10€ to the [Contao Association](https://association.contao.org/)
-for every user buying the Cookiebot subscription via us. [More info](https://www.etes.de/cookiebot).
+**Special:** ETES will give a percentage of the license fee to the
+[Contao Association](https://association.contao.org/) for every user buying the
+Cookiebot subscription via us. [More info](https://www.etes.de/cookiebot).
 
 ## Installation
 
