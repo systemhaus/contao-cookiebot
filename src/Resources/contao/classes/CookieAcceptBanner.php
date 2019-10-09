@@ -18,7 +18,7 @@ use PageModel;
  */
 class CookieAcceptBanner
 {
-    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript". data-blockingmode="auto"></script>';
+    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript" data-blockingmode="auto"></script>';
 
     public function insertJavascriptIntoFullPage($strBuffer, $strTemplate)
     {

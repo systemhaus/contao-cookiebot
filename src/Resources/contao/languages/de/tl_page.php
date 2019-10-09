@@ -18,6 +18,6 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_active'] = [
     'Aktiviert das Cookiebot-Skript für diesen Startpunkt und stellt die Cookiebot-Leiste auf jeder Unterseite dar.',
 ];
 $GLOBALS['TL_LANG']['tl_page']['cookiebot_api_key'] = [
-    'API-Schlüssel',
-    'Geben Sie den API-Schlüssel ein, den Sie von Cookiebot oder einem Wiederverkäufer erhalten haben.',
+    'Registrierungsschlüssel',
+    'Geben Sie den Registrierungsschlüssel ein, den Sie von Cookiebot oder einem Wiederverkäufer erhalten haben.',
 ];

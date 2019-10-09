@@ -18,6 +18,6 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_active'] = [
     'This enabled the Cookiebot bar for each page under this website root.',
 ];
 $GLOBALS['TL_LANG']['tl_page']['cookiebot_api_key'] = [
-    'API key',
-    'Enter the API key you received from Cookiebot or one of the resellers.',
+    'Registration Code',
+    'Enter the registration code you received from Cookiebot or one of the resellers.',
 ];
