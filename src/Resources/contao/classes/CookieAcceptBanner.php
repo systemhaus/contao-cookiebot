@@ -23,7 +23,7 @@ class CookieAcceptBanner
     public function insertJavascriptIntoFullPage($strBuffer, $strTemplate)
     {
         global $objPage;
-        if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null && $objRootPage->cookiebot_active) {
+        if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null && $objRootPage->cookiebot_active && $objRootPage->cookiebot_show_banner) {
             $api_key = $objRootPage->cookiebot_api_key;
             if ($api_key !== null) {
                 $html = sprintf(self::JS_STRING, $api_key);
