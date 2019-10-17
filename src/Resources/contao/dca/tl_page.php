@@ -35,3 +35,11 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_api_key'] = array(
     'eval' => array('decodeEntities' => true, 'tl_class' => 'w50'),
     'sql' => "text default ''"
 );
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_show_banner'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_show_banner'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => array('tl_class' => 'w50'),
+    'sql' => "char(1) NOT NULL default '1'"
+);

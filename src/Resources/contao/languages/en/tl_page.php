@@ -15,9 +15,13 @@ declare(strict_types=1);
 $GLOBALS['TL_LANG']['tl_page']['cookiebot_legend'] = 'Cookiebot';
 $GLOBALS['TL_LANG']['tl_page']['cookiebot_active'] = [
     'Activate Cookiebot',
-    'This enabled the Cookiebot bar for each page under this website root.',
+    'This enables the Cookiebot script for this website root.',
 ];
 $GLOBALS['TL_LANG']['tl_page']['cookiebot_api_key'] = [
     'Registration Code',
     'Enter the registration code you received from Cookiebot or one of the resellers.',
+];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_show_banner'] = [
+    'Show Cookiebot bar',
+    'This enables the Cookiebot bar for each page under this website root.',
 ];
