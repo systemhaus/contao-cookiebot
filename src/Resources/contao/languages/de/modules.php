@@ -9,7 +9,7 @@
 
 declare(strict_types=1);
 
-$GLOBALS['TL_LANG']['FMD']['cookieDeclaration'] = [
+$GLOBALS['TL_LANG']['FMD']['cookiebot_declaration'] = [
     'Cookiebot-Erklärung',
     'Ausgabe ausführlicher Informationen zu Cookies im Frontend',
 ];
