@@ -1,0 +1,12 @@
+
+<?php if ($this->active): ?>
+<!-- indexer::stop -->
+<div class="<?=$this->class . ' ' . $this->additional_classes?> block"<?=$this->cssID ?>>
+
+<?php if ($this->headline): ?>
+<<?=$this->hl ?>><?=$this->headline ?></<?=$this->hl ?>>
+<?php endif ?>
+<script id="CookiebotDeclaration" src="https://consent.cookiebot.com/<?=$this->api_key?>/cd.js" type="text/javascript" async></script>
+</div>
+<!-- indexer::continue -->
+<?php endif; ?>

@@ -34,11 +34,7 @@
   "autoload": {
     "psr-4": {
       "Systemhaus\\Cookiebot\\": "src/"
-    },
-    "classmap": [
-      "src/Resources/contao/classes",
-      "src/Resources/contao/modules"
-    ]
+    }
   },
   "scripts": {
     "check-style": "phpcs -pn --standard=tests/ruleset.xml src",
