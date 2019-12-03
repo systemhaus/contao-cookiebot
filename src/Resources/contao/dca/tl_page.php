@@ -17,7 +17,7 @@ $GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(
     $GLOBALS['TL_DCA']['tl_page']['palettes']['root']
 );
 
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto';
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_active'],
@@ -38,6 +38,14 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_api_key'] = array(
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_show_banner'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_show_banner'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => array('tl_class' => 'w50 m12'),
+    'sql' => "char(1) NOT NULL default '1'"
+);
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_blockingmode_auto'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_blockingmode_auto'],
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => array('tl_class' => 'w50 m12'),

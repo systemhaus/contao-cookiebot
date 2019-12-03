@@ -15,7 +15,7 @@ community.
 
 For using Cookiebot in any website, an API key is required. You can register
 yourself [directly with Cookiebot](https://manage.cookiebot.com/de/signup) or
-choose a [reseller](https://www.cookiebot.com/en/resellers/).  
+choose a [reseller](https://www.cookiebot.com/en/resellers/).
 **Special:** ETES will give a percentage of the license fee to the
 [Contao Association](https://association.contao.org/) for every user buying the
 Cookiebot subscription via us. [More info](https://www.etes.de/cookiebot).
@@ -60,15 +60,19 @@ or disable Cookiebot separately. Cookiebot requires an API key to function.
 You can enter this key in the page settings.
 
 If the key is valid, the Cookiebot bar is automatically shown in the frontend.
-Errors with your key would show up in the Javascript console of your browser. 
+Errors with your key would show up in the Javascript console of your browser.
 
 If your website contains a legal or privacy page, you can include the Cookiebot
 frontend module there. Simply create a new frontend module and insert it into
 the article of your choice. The frontend module should only be included in a
 page layout if you know what you're doing!
 
+If you want to perform cookie blocking manually, you can disable automatic cookie blocking in the page settings.
+Please read the [implementation guide of Cookiebot](https://www.cookiebot.com/goto/manual-implementation)
+on how to manually mark cookie setting scripts and correctly implement Cookiebot on your website.
+
 ## Support
 
-Authored by: [ETES GmbH](https://github.com/systemhaus/)  
-More information on [our website](https://www.etes.de/cookiebot).  
+Authored by: [ETES GmbH](https://github.com/systemhaus/)
+More information on [our website](https://www.etes.de/cookiebot).
 For bugs, please create an [issue in the tracker](https://github.com/systemhaus/contao-cookiebot/issues).
