@@ -70,5 +70,5 @@ page layout if you know what you're doing!
 ## Support
 
 Authored by: [ETES GmbH](https://github.com/systemhaus/)  
-More information on [our website](https://www.etes.de/cookiebot).  
+More information on [our website](https://www.etes.de/stuttgart-cloud/webhosting/cookiebanner/).  
 For bugs, please create an [issue in the tracker](https://github.com/systemhaus/contao-cookiebot/issues).
