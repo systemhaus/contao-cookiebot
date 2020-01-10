@@ -28,8 +28,8 @@ class CookieAcceptBanner
             if ($api_key !== null) {
                 $html = sprintf(self::JS_STRING, $api_key);
                 $strBuffer = str_replace(
-                    '<head>',
-                    "<head>\n$html",
+                    '</title>',
+                    "</title>\n$html",
                     $strBuffer
                 );
             }
