@@ -25,3 +25,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_show_banner'] = [
     'Cookiebot-Leiste anzeigen',
     'Aktiviert die Anzeige der Cookiebot-Leiste auf allen Unterseiten.',
 ];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_blockingmode_auto'] = [
+    'Automatische Cookie-Blockierung',
+    'Aktiviert die automatische Cookie-Blockierung. Achtung: Wenn deaktiviert, müssen Cookies manuell blockiert werden!',
+];
