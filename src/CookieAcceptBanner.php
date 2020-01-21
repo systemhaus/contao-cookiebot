@@ -18,7 +18,7 @@ use PageModel;
  */
 class CookieAcceptBanner
 {
-    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript" data-blockingmode="auto"></script>';
+    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript" %s></script>';
 
     public function insertJavascriptIntoFullPage($strBuffer, $strTemplate)
     {
@@ -26,7 +26,11 @@ class CookieAcceptBanner
         if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null && $objRootPage->cookiebot_active && $objRootPage->cookiebot_show_banner) {
             $api_key = $objRootPage->cookiebot_api_key;
             if ($api_key !== null) {
-                $html = sprintf(self::JS_STRING, $api_key);
+                $blockingmode = '';
+                if ((int)$objRootPage->cookiebot_blockingmode_auto === 1) {
+                    $blockingmode = 'data-blockingmode="auto"';
+                }
+                $html = sprintf(self::JS_STRING, $api_key, $blockingmode);
                 $strBuffer = str_replace(
                     '</title>',
                     "</title>\n$html",

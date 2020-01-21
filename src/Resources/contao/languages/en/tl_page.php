@@ -25,3 +25,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_show_banner'] = [
     'Show Cookiebot bar',
     'This enables the Cookiebot bar for each page under this website root.',
 ];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_blockingmode_auto'] = [
+    'Automatic cookie blocking',
+    'This enables automatic cookie blocking. Attention: If disabled, all cookies must be blocked manually!',
+];
