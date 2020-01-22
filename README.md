@@ -71,6 +71,12 @@ If you want to perform cookie blocking manually, you can disable automatic cooki
 Please read the [implementation guide of Cookiebot](https://www.cookiebot.com/goto/manual-implementation)
 on how to manually mark cookie setting scripts and correctly implement Cookiebot on your website.
 
+### Caching in Contao >= 4.8
+
+In Contao 4.8 the page cache won't work with the cookie `CookieConsent` of Cookiebot.
+You have to define a cookie whitelist, to ignore that cookie - see:
+https://www.youtube.com/watch?v=VU4JmsmF99Y&feature=youtu.be&t=1802
+
 ## Support
 
 Authored by: [ETES GmbH](https://github.com/systemhaus/) and community
