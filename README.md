@@ -67,9 +67,17 @@ frontend module there. Simply create a new frontend module and insert it into
 the article of your choice. The frontend module should only be included in a
 page layout if you know what you're doing!
 
-If you want to perform cookie blocking manually, you can disable automatic cookie blocking in the page settings.
-Please read the [implementation guide of Cookiebot](https://www.cookiebot.com/goto/manual-implementation)
-on how to manually mark cookie setting scripts and correctly implement Cookiebot on your website.
+If you want to perform cookie blocking manually, you can disable automatic
+cookie blocking in the page settings. Please read the [implementation guide of Cookiebot](https://www.cookiebot.com/goto/manual-implementation)
+on how to manually mark cookie setting scripts and correctly implement
+Cookiebot on your website.
+
+### Caching in Contao >= 4.8
+
+From Contao 4.8 onwards, the new page caching mechanism treats cookies
+differently than older Contao versions. For caching to work in the desired way,
+the Cookiebot cookie `CookieConsent` needs to be included in a global whitelist
+for that environment. Manual action is required. For details, see [this video](https://www.youtube.com/watch?v=VU4JmsmF99Y&feature=youtu.be&t=1802).
 
 ## Support
 
