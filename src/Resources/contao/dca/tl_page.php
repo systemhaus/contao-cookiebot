@@ -9,14 +9,9 @@
 
 declare(strict_types=1);
 
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
+
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiebot_active';
-
-$GLOBALS['TL_DCA']['tl_page']['palettes']['root'] = str_replace(
-    '{publish_legend}',
-    '{cookiebot_legend:hide},cookiebot_active;{publish_legend}',
-    $GLOBALS['TL_DCA']['tl_page']['palettes']['root']
-);
-
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto';
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
@@ -51,3 +46,10 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_blockingmode_auto'] = array(
     'eval' => array('tl_class' => 'w50 m12'),
     'sql' => "char(1) NOT NULL default '1'"
 );
+
+PaletteManipulator::create()
+    ->addLegend('cookiebot_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
+    ->addField('cookiebot_active', 'cookiebot_legend', PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('root', 'tl_page')
+    ->applyToPalette('rootfallback', 'tl_page')
+;
