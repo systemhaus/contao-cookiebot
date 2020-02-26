@@ -77,7 +77,8 @@ Cookiebot on your website.
 From Contao 4.8 onwards, the new page caching mechanism treats cookies
 differently than older Contao versions. For caching to work in the desired way,
 the Cookiebot cookie `CookieConsent` needs to be included in a global whitelist
-for that environment. Manual action is required. For details, see [this video](https://www.youtube.com/watch?v=VU4JmsmF99Y&feature=youtu.be&t=1802).
+for that environment. Manual action is required.  
+For details, see [COOKIE_WHITELIST in the Developer Documentation](https://docs.contao.org/dev/reference/config/#environment-variables-for-the-contao-managed-edition).
 
 ## Support
 
