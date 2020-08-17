@@ -47,9 +47,17 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_blockingmode_auto'] = array(
     'sql' => "char(1) NOT NULL default '1'"
 );
 
-PaletteManipulator::create()
-    ->addLegend('cookiebot_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
-    ->addField('cookiebot_active', 'cookiebot_legend', PaletteManipulator::POSITION_APPEND)
-    ->applyToPalette('root', 'tl_page')
-    ->applyToPalette('rootfallback', 'tl_page')
-;
+if (isset($GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'])) {
+    PaletteManipulator::create()
+        ->addLegend('cookiebot_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
+        ->addField('cookiebot_active', 'cookiebot_legend', PaletteManipulator::POSITION_APPEND)
+        ->applyToPalette('root', 'tl_page')
+        ->applyToPalette('rootfallback', 'tl_page')
+    ;
+} else {
+    PaletteManipulator::create()
+        ->addLegend('cookiebot_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
+        ->addField('cookiebot_active', 'cookiebot_legend', PaletteManipulator::POSITION_APPEND)
+        ->applyToPalette('root', 'tl_page')
+    ;
+}
