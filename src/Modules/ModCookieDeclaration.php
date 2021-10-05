@@ -11,7 +11,9 @@ declare(strict_types=1);
 
 namespace Systemhaus\Cookiebot\Modules;
 
-class ModCookieDeclaration extends \Backend
+use Contao\Backend;
+
+class ModCookieDeclaration extends Backend
 {
 
     /**

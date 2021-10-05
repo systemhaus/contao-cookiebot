@@ -11,8 +11,10 @@ declare(strict_types=1);
 
 namespace Systemhaus\Cookiebot\Modules;
 
+use Contao\BackendTemplate;
+use Contao\FrontendTemplate;
 use Contao\Module;
-use PageModel;
+use Contao\PageModel;
 
 /**
  * Frontend module for displaying the Cookiebot details in a privacy page
@@ -24,7 +26,7 @@ class CookieDeclaration extends Module
     public function generate()
     {
         if (TL_MODE === 'BE') {
-            $objTemplate = new \BackendTemplate('be_wildcard');
+            $objTemplate = new BackendTemplate('be_wildcard');
             $objTemplate->wildcard = '###' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['cookiebot_declaration'][0] . '###');
             $objTemplate->id = $this->id;
             $objTemplate->link = $this->name;
@@ -41,7 +43,7 @@ class CookieDeclaration extends Module
 
         if (($objRootPage = PageModel::findByPk($objPage->rootId)) !== null) {
             if ($this->cookiebot_declaration_template && $this->cookiebot_declaration_template !== 'mod_cookiebot_declaration') {
-                $this->Template = new \FrontendTemplate($this->cookiebot_declaration_template);
+                $this->Template = new FrontendTemplate($this->cookiebot_declaration_template);
             }
 
             $api_key = $objRootPage->cookiebot_api_key;
