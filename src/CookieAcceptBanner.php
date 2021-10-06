@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace Systemhaus\Cookiebot;
 
-use PageModel;
+use Contao\PageModel;
 
 /**
  * Insert the Cookiebot JS first place in the page <head>
