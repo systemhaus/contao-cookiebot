@@ -12,7 +12,7 @@ declare(strict_types=1);
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiebot_active';
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto,cookiebot_culture';
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_active'],
@@ -45,6 +45,14 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_blockingmode_auto'] = array(
     'inputType' => 'checkbox',
     'eval' => array('tl_class' => 'w50 m12'),
     'sql' => "char(1) NOT NULL default '1'"
+);
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_culture'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_culture'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => array('tl_class' => 'w50', 'maxlength' => 3),
+    'sql' => "char(3) NOT NULL default ''"
 );
 
 if (isset($GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'])) {
