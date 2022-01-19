@@ -18,7 +18,7 @@ use Contao\PageModel;
  */
 class CookieAcceptBanner
 {
-    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript" %s></script>';
+    const JS_STRING = '<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="%s" type="text/javascript" %s%s></script>';
 
     public function insertJavascriptIntoFullPage($strBuffer, $strTemplate)
     {
@@ -34,7 +34,11 @@ class CookieAcceptBanner
                 if ((int)$objRootPage->cookiebot_blockingmode_auto === 1) {
                     $blockingmode = 'data-blockingmode="auto"';
                 }
-                $html = sprintf(self::JS_STRING, $api_key, $blockingmode);
+                $culture = '';
+                if (!empty($objRootPage->cookiebot_culture)) {
+                    $culture = ' data-culture="'.$objRootPage->cookiebot_culture.'"';
+                }
+                $html = sprintf(self::JS_STRING, $api_key, $blockingmode, $culture);
                 $strBuffer = str_replace(
                     '</title>',
                     "</title>\n$html",

@@ -29,3 +29,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_blockingmode_auto'] = [
     'Automatic cookie blocking',
     'This enables automatic cookie blocking. Attention: If disabled, all cookies must be blocked manually!',
 ];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_culture'] = [
+    'Language of the Cookiebot bar',
+    'Optionally sets the language of the Cookiebot bar to a maintained language of Cookiebot (e.g. en).',
+];

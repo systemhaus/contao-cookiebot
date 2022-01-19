@@ -72,13 +72,16 @@ cookie blocking in the page settings. Please read the [implementation guide of C
 on how to manually mark cookie setting scripts and correctly implement
 Cookiebot on your website.
 
+If you want to set a fixed language, you can configure a Cookiebot culture (two-letter or three-letter code, e.g. `en`) in the page settings.
+Please also read the [support instructions](https://support.cookiebot.com/hc/en-us/articles/360003793394-How-to-set-the-language-of-the-consent-banner-).
+
 ### Caching in Contao >= 4.8
 
 From Contao 4.8 onwards, the new page caching mechanism treats cookies
 differently than older Contao versions. For caching to work in the desired way,
-the Cookiebot cookie `CookieConsent` needs to be included in a global whitelist
+the Cookiebot cookie `CookieConsent` needs to be included in a global allow list
 for that environment. Manual action is required.  
-For details, see [COOKIE_WHITELIST in the Developer Documentation](https://docs.contao.org/dev/reference/config/#environment-variables-for-the-contao-managed-edition).
+For details, see [COOKIE_ALLOW_LIST in the Developer Documentation](https://docs.contao.org/dev/reference/config/#cookie-allow-list).
 
 ## Support
 
