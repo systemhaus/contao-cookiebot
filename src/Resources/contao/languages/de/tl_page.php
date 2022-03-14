@@ -33,3 +33,11 @@ $GLOBALS['TL_LANG']['tl_page']['cookiebot_culture'] = [
     'Sprache der Cookiebot-Leiste',
     'Setzt die Sprache der Cookiebot-Leiste optional auf eine gepflegte Sprache von Cookiebot (z.B. de).',
 ];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location'] = [
+    'Standort des Cookiebot-CDN',
+    'Wählen Sie "Europäische Union" für DS-GVO-Konformität'
+];
+$GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location_options'] = [
+    'eu' => 'Europäische Union',
+    'us' => 'Vereinigte Staaten von Amerika'
+];

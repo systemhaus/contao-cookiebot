@@ -6,7 +6,7 @@
 <?php if ($this->headline): ?>
 <<?=$this->hl ?>><?=$this->headline ?></<?=$this->hl ?>>
 <?php endif ?>
-<script id="CookiebotDeclaration" src="https://consent.cookiebot.com/<?=$this->api_key?>/cd.js" type="text/javascript" async></script>
+<script id="CookiebotDeclaration" src="https://consent.cookiebot.<?= $this->location == 'eu' ? 'eu' : 'com' ?>/<?=$this->api_key?>/cd.js" type="text/javascript" async></script>
 </div>
 <!-- indexer::continue -->
 <?php endif; ?>

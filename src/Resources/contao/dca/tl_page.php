@@ -12,7 +12,7 @@ declare(strict_types=1);
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiebot_active';
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto,cookiebot_culture';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiebot_active'] = 'cookiebot_api_key,cookiebot_show_banner,cookiebot_blockingmode_auto,cookiebot_culture,cookiebot_cdn_location';
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_active'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_active'],
@@ -53,6 +53,15 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_culture'] = array(
     'inputType' => 'text',
     'eval' => array('tl_class' => 'w50', 'maxlength' => 3),
     'sql' => "char(3) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_cdn_location'] = array(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => $GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location_options'],
+    'eval' => ['tl_class' => 'w50', 'includeBlankOption' => false],
+    'sql' => "char(2) NOT NULL default 'eu'"
 );
 
 if (isset($GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'])) {

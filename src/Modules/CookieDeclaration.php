@@ -47,11 +47,13 @@ class CookieDeclaration extends Module
             }
 
             $api_key = $objRootPage->cookiebot_api_key;
+            $location = $objRootPage->cookiebot_cdn_location;
             $additional_classes = 'mod_cookiebot';
 
             $this->Template->additional_classes = $additional_classes;
             $this->Template->active = $objRootPage->cookiebot_active;
             $this->Template->api_key = $api_key;
+            $this->Template->location = $location;
         }
     }
 }
