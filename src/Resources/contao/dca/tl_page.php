@@ -59,7 +59,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiebot_cdn_location'] = array(
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location'],
     'exclude' => true,
     'inputType' => 'select',
-    'options' => $GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location_options'],
+    'options' => &$GLOBALS['TL_LANG']['tl_page']['cookiebot_cdn_location_options'],
     'eval' => ['tl_class' => 'w50', 'includeBlankOption' => false],
     'sql' => "char(2) NOT NULL default 'eu'"
 );
