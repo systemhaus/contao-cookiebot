@@ -25,7 +25,7 @@ class CookieDeclaration extends Module
 
     public function generate()
     {
-        if (TL_MODE === 'BE') {
+        if (\Contao\System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(\Contao\System::getContainer()->get('request_stack')->getCurrentRequest() ?? \Symfony\Component\HttpFoundation\Request::create(''))) {
             $objTemplate = new BackendTemplate('be_wildcard');
             $objTemplate->wildcard = '###' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['cookiebot_declaration'][0] . '###');
             $objTemplate->id = $this->id;
